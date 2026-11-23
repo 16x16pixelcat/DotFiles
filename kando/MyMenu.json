@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "menu": {
     "root": {
       "name": "MyMenu",
@@ -20,6 +20,9 @@
           "icon": "apps",
           "iconTheme": "material-symbols-rounded",
           "type": "submenu",
+          "openWorkflow": {
+            "actions": []
+          },
           "activateWorkflow": {
             "quickSelectKey": "Backspace",
             "actions": [
@@ -30,14 +33,17 @@
           },
           "children": [
             {
-              "name": "Open Settings",
-              "icon": "settings-item.svg",
-              "iconTheme": "kando",
               "type": "button",
+              "name": "ONLYOFFICE",
+              "icon": "ONLYOFFICE",
+              "iconTheme": "system",
               "selectWorkflow": {
                 "actions": [
                   {
-                    "type": "open-settings"
+                    "type": "execute-command",
+                    "command": "start \"\" \"shell:AppsFolder\\ASC.Documents.5\"",
+                    "detached": true,
+                    "isolated": false
                   },
                   {
                     "type": "close-menu"
@@ -46,10 +52,10 @@
               }
             },
             {
-              "type": "button",
               "name": "Windows PowerShell",
               "icon": "Windows PowerShell",
               "iconTheme": "system",
+              "type": "button",
               "selectWorkflow": {
                 "actions": [
                   {
@@ -82,11 +88,28 @@
                   }
                 ]
               }
+            },
+            {
+              "type": "button",
+              "name": "Google Chrome",
+              "icon": "Google Chrome",
+              "iconTheme": "system",
+              "selectWorkflow": {
+                "actions": [
+                  {
+                    "type": "execute-command",
+                    "command": "start \"\" \"shell:AppsFolder\\Chrome\"",
+                    "detached": true,
+                    "isolated": false
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
             }
           ],
-          "openWorkflow": {
-            "actions": []
-          }
+          "angle": 0
         },
         {
           "name": "Web Links",
@@ -585,6 +608,22 @@
               }
             }
           ]
+        },
+        {
+          "name": "Open Settings",
+          "icon": "settings-item.svg",
+          "iconTheme": "kando",
+          "type": "button",
+          "selectWorkflow": {
+            "actions": [
+              {
+                "type": "open-settings"
+              },
+              {
+                "type": "close-menu"
+              }
+            ]
+          }
         }
       ]
     },
