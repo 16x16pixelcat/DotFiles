@@ -16,6 +16,118 @@
       },
       "children": [
         {
+          "name": "Windows",
+          "icon": "select_window",
+          "iconTheme": "material-symbols-rounded",
+          "type": "submenu",
+          "openWorkflow": {
+            "quickSelectKey": "W",
+            "actions": []
+          },
+          "activateWorkflow": {
+            "quickSelectKey": "Backspace",
+            "actions": [
+              {
+                "type": "close-submenu"
+              }
+            ]
+          },
+          "children": [
+            {
+              "name": "Toggle Maximize",
+              "icon": "open_in_full",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "angle": 0,
+              "selectWorkflow": {
+                "quickSelectKey": "F",
+                "actions": [
+                  {
+                    "type": "close-menu"
+                  },
+                  {
+                    "type": "simulate-hotkey",
+                    "hotkey": "MetaLeft+ArrowUp"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Tile Right",
+              "icon": "text_select_jump_to_end",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "angle": 90,
+              "selectWorkflow": {
+                "quickSelectKey": "R",
+                "actions": [
+                  {
+                    "type": "close-menu"
+                  },
+                  {
+                    "type": "simulate-hotkey",
+                    "hotkey": "MetaLeft+ArrowRight"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Close Window",
+              "icon": "cancel_presentation",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "quickSelectKey": "X",
+                "actions": [
+                  {
+                    "type": "close-menu"
+                  },
+                  {
+                    "type": "simulate-hotkey",
+                    "hotkey": "AltLeft+F4"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Tile Left",
+              "icon": "text_select_jump_to_beginning",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "angle": 270,
+              "selectWorkflow": {
+                "quickSelectKey": "L",
+                "actions": [
+                  {
+                    "type": "close-menu"
+                  },
+                  {
+                    "type": "simulate-hotkey",
+                    "hotkey": "MetaLeft+ArrowLeft"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Open Settings",
+          "icon": "settings-item.svg",
+          "iconTheme": "kando",
+          "type": "button",
+          "selectWorkflow": {
+            "actions": [
+              {
+                "type": "open-settings"
+              },
+              {
+                "type": "close-menu"
+              }
+            ]
+          },
+          "angle": 334.2857142857143
+        },
+        {
           "name": "Apps",
           "icon": "apps",
           "iconTheme": "material-symbols-rounded",
@@ -109,7 +221,7 @@
               }
             }
           ],
-          "angle": 0
+          "angle": 25.714285714285722
         },
         {
           "name": "Web Links",
@@ -140,6 +252,24 @@
                   {
                     "type": "open-uri",
                     "uri": "https://www.google.com"
+                  },
+                  {
+                    "type": "close-menu"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Mwmbl",
+              "icon": "search",
+              "iconTheme": "material-symbols-rounded",
+              "type": "button",
+              "selectWorkflow": {
+                "quickSelectKey": "G",
+                "actions": [
+                  {
+                    "type": "open-uri",
+                    "uri": "https://mwmbl.org/"
                   },
                   {
                     "type": "close-menu"
@@ -352,102 +482,8 @@
                 ]
               }
             }
-          ]
-        },
-        {
-          "name": "Windows",
-          "icon": "select_window",
-          "iconTheme": "material-symbols-rounded",
-          "type": "submenu",
-          "openWorkflow": {
-            "quickSelectKey": "W",
-            "actions": []
-          },
-          "activateWorkflow": {
-            "quickSelectKey": "Backspace",
-            "actions": [
-              {
-                "type": "close-submenu"
-              }
-            ]
-          },
-          "children": [
-            {
-              "name": "Toggle Maximize",
-              "icon": "open_in_full",
-              "iconTheme": "material-symbols-rounded",
-              "type": "button",
-              "angle": 0,
-              "selectWorkflow": {
-                "quickSelectKey": "F",
-                "actions": [
-                  {
-                    "type": "close-menu"
-                  },
-                  {
-                    "type": "simulate-hotkey",
-                    "hotkey": "MetaLeft+ArrowUp"
-                  }
-                ]
-              }
-            },
-            {
-              "name": "Tile Right",
-              "icon": "text_select_jump_to_end",
-              "iconTheme": "material-symbols-rounded",
-              "type": "button",
-              "angle": 90,
-              "selectWorkflow": {
-                "quickSelectKey": "R",
-                "actions": [
-                  {
-                    "type": "close-menu"
-                  },
-                  {
-                    "type": "simulate-hotkey",
-                    "hotkey": "MetaLeft+ArrowRight"
-                  }
-                ]
-              }
-            },
-            {
-              "name": "Close Window",
-              "icon": "cancel_presentation",
-              "iconTheme": "material-symbols-rounded",
-              "type": "button",
-              "selectWorkflow": {
-                "quickSelectKey": "X",
-                "actions": [
-                  {
-                    "type": "close-menu"
-                  },
-                  {
-                    "type": "simulate-hotkey",
-                    "hotkey": "AltLeft+F4"
-                  }
-                ]
-              }
-            },
-            {
-              "name": "Tile Left",
-              "icon": "text_select_jump_to_beginning",
-              "iconTheme": "material-symbols-rounded",
-              "type": "button",
-              "angle": 270,
-              "selectWorkflow": {
-                "quickSelectKey": "L",
-                "actions": [
-                  {
-                    "type": "close-menu"
-                  },
-                  {
-                    "type": "simulate-hotkey",
-                    "hotkey": "MetaLeft+ArrowLeft"
-                  }
-                ]
-              }
-            }
-          ]
+          ],
+          "angle": 180
         },
         {
           "name": "Bookmarks",
@@ -608,22 +644,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "Open Settings",
-          "icon": "settings-item.svg",
-          "iconTheme": "kando",
-          "type": "button",
-          "selectWorkflow": {
-            "actions": [
-              {
-                "type": "open-settings"
-              },
-              {
-                "type": "close-menu"
-              }
-            ]
-          }
         }
       ]
     },
